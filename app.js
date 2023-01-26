@@ -1,5 +1,13 @@
 function datingRange(age){
-    //return min-max
+    if(age > 14){
+        let myMin = (age / 2) + 7;
+        let myMax = (age - 7) * 2;
+        return Math.floor(myMin) + "-" + Math.floor(myMax);
+    } else {
+        let myMin = age - (0.10 * age);
+        let myMax = age + (0.10 * age);
+        return Math.floor(myMin) + "-" + Math.floor(myMax);
+    }
 }
 
 console.log(datingRange(17)); // "15-20"
